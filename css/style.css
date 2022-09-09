@@ -1,0 +1,185 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+:root{ /* declaracion de variables*/
+    /*variables para los colores a utilizar*/
+    --blue: #0092CA;
+    --black: #222831;
+    --medium-gray: #393E46;
+    --light-gray:#A4B1B6;
+    --write: #EEEEEE;
+    --red:#DF3434;
+    --green:#84D66F;
+    /* Variables para tamaño de letras*/
+    --sm:14px;
+    --md:16px;
+    --lg:18px;
+    --fuente: 'Roboto', sans-serif;
+} 
+
+*,*::after,::before{
+    box-sizing: border-box;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+body{    
+    height: 90hv;
+    font-family: var(--fuente);
+    margin: 0;/*quita el margen*/
+}
+
+.container-login{
+    height: 34.75em;
+    width: 60em;
+    margin: 3em auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+  
+}
+.image-login{  
+    padding: 2rem; 
+    background-image: url('../images/gato.jpg');
+    background-position: center center;
+    background-size: cover; 
+    width: 40%;
+
+}
+
+
+.form-container {   
+    width: 60%;
+    padding:40px 80px;
+    background-color: var(--light-gray);
+   align-content: center;    
+}
+
+.form-login{
+    display: grid; /* organizar las filas*/
+    grid-template: auto 1fr auto; /* organizar las filas*/
+}
+*
+.form{
+    margin-bottom: 50px;
+   
+    border-radius: 0 0 8px 8px;
+    padding:  30px;
+    background-color: var(--write);
+    display: flex;
+    flex-direction: column; /* se coloca los input y label debajo del otro*/   
+    box-shadow: 0 0 8px gray; 
+}
+
+.logo{
+    width: 200px;  
+    justify-self: center;
+    margin-bottom: 20px;
+}
+
+.title{
+    border-radius:  8px 8px 0 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: var(--medium-gray);
+    color: var(--write);
+    text-align: center;
+    padding: 20PX;
+    
+}
+
+.input{
+    background-color: var(--write);  
+    border:1px solid var(--light-gray);
+    border-radius: 6px; /*redondea los bordes*/
+    height: 40px;
+    font-size: var(--sm);
+    padding: 10px;
+    margin-bottom: 20px;
+    text-decoration-color: var(--blue);   
+    outline-color: #A4B1B6; 
+}
+
+.input::placeholder{
+    color: var(--light-gray); 
+    font-weight:500 ;
+}
+
+.input:hover {
+    box-shadow: 0 0 5px gray;
+}
+
+.primary-button{
+    padding: 10px;
+    background-color: #0092CA;
+    color: var(--write);
+    border: none;
+    border-radius: 6px;
+    font-size: var(--sm);
+    font-weight: 700;
+}
+
+.login-button:hover{
+    background-color: rgb(0, 146, 202 , 0.7);
+    color: #EEEEEE;
+  
+}
+
+.link-login{
+    text-decoration: none;
+    font-size: 10px;
+    text-align: center;
+    color: var(--blue);
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+/*RECUPERACION DE CONTRASEÑA*/
+.image-password-olvidada{
+    padding: 2rem; 
+    background-image: url('../images/perro.jpg');
+    background-position: center center;
+    background-size: cover; 
+    width: 40%;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .container-login {
+        width: 70%;
+        margin-top: 3rem;
+    }
+    .form-container  {
+        width: 100%;
+        border-radius: 5px;
+    }
+    
+    .image-login {
+        display: none;
+    }  
+    .image-password-olvidada{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .image-login {
+        width: 90%;
+    }
+    .image-password-olvidada{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .image-login {
+        height: 90%;
+    }
+    .image-password-olvidada{
+        height: 90%;
+    }
+   
+}
