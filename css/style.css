@@ -25,9 +25,12 @@ html{
 }
 
 body{    
-    height: 90hv;
+    height: 110hv;
     font-family: var(--fuente);
     margin: 0;/*quita el margen*/
+}
+.body-login{
+    background-image: linear-gradient(to top, #EEEEEE 0%, #393E46 100%)
 }
 
 .container-login{
@@ -53,7 +56,7 @@ body{
 .form-container {   
     width: 60%;
     padding:40px 80px;
-    background-color: var(--light-gray);
+    background-color: rgb(164 ,177,182,0.7);
    align-content: center;    
 }
 
@@ -116,6 +119,7 @@ body{
     background-color: #0092CA;
     color: var(--write);
     border: none;
+    width: 100%;
     border-radius: 6px;
     font-size: var(--sm);
     font-weight: 700;
@@ -144,7 +148,62 @@ body{
     background-size: cover; 
     width: 40%;
 }
+/********************Email enviado*******************/
 
+.container-email{
+    background-color: var(--write);
+    padding-bottom: 30px;
+    display: grid; /* organizar las filas*/
+    width: 300px; /* le damos el ancho*/
+    justify-items: center; /* centramos la imagen y la bolita*/
+}
+.title-email{
+    background-color: var(--medium-gray);
+    color: var(--write);
+    text-align: center;
+    margin-top: 0;
+    width: 100%;    
+    margin-bottom: 12px;
+    padding: 20px;
+  
+  
+}
+.subtitle{
+    color: var(--medium-gray);
+    font-size: var(--md); /*tamaño de la letra*/
+    font-weight: 300; /*especidad a la letra*/
+    margin-top: 0;
+    margin-bottom: 32px;
+    text-align: center;
+}
+.email-image{
+    width: 110px; /* ancho de la bolita*/
+    height: 110px; /* alto de la bolita*/
+    border-radius: 50%; /* redonderar*/
+    background-color: var(--light-gray); /*color de fondo de la bolita*/
+    display: flex; /*centra la imagen en la bolita*/
+    justify-content: center; /*centra la imagen en la bolita*/
+    align-items: center; /*centra la imagen en la bolita*/
+    margin-bottom: 30px; 
+}
+
+.email-image img{
+    width: 70px;
+}
+.email-button{
+    padding: 10px 30px;
+    width: 90%;
+}
+.resend{
+    font-size: var(--sm);
+}
+.resend span{
+    color: var(--light-gray);
+}
+.resend a{
+    color: var(--blue);
+    text-decoration: none;
+}
 
 
 @media screen and (max-width: 1000px) {
